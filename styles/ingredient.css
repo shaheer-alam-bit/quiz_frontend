@@ -1,0 +1,26 @@
+/* Style for ingredient container */
+.ingredient-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for ingredient name */
+  .ingredient-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for ingredient description */
+  .ingredient-description {
+    font-size: 16px;
+  }
+  
+  /* Style for message */
+  .message {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  

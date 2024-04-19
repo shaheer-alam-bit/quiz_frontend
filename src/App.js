@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import SignUp from './components/SignUp';
+import Login from './components/Login';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css';
+import Recipe from './components/Recipe';
+import Home from './components/Home';
+import AdminDashboard from './components/AdminDashboard';
+import CreateIngredient from './components/CreateIngredient';
+import CreateRecipe from './components/CreateRecipe';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+    <Router>
+      <div className="App">
+        <h1>Recipe System</h1>
+      </div>
+      <Routes>
+        <Route exact path='/' element={<Home/>}/>
+        <Route path="/signup" element={<SignUp/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/admin-dashboard" element={<AdminDashboard/>} />
+        <Route path="/getMeals" element={<Recipe/>} />
+        <Route path="/add-ingredient" element={<CreateIngredient/>}/>
+        <Route path="/add-recipe" element={<CreateRecipe/>}/>
+      </Routes>
+    </Router>
+  )
 }
 
 export default App;
